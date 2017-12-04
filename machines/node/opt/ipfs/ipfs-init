@@ -4,6 +4,6 @@ rm -rf /root/.ipfs
 
 ipfs init
 sleep 1
-ipfs daemon --disable-transport-encryption &
+ipfs daemon "$@" &
 
 echo $! > /tmp/ipfs.pid
