@@ -17,3 +17,7 @@ deploy_manager(){
   echo 'source $PATH_TESTS/bin/remote.sh' >> $PATH_LAB/manager/root/.bashrc
   echo 'source $PATH_TESTS/bin/manager.sh' >> $PATH_LAB/manager/root/.bashrc
 }
+
+deploy_router(){
+  cp -r machines/router $PATH_LAB/$1
+}
