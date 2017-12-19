@@ -1,0 +1,6 @@
+/sbin/ifconfig eth0 200.1.64.254 netmask 255.255.192.0  gateway 200.1.64.2 broadcast 200.1.127.255 up
+/sbin/route add default gw 200.1.64.2 eth0
+
+service ssh start
+
+echo "export PATH=$PATH:/opt/ipfs" >> /root/.bashrc

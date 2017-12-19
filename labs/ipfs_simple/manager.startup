@@ -1,0 +1,8 @@
+dpkg -i /tmp/*.deb
+rm -r /tmp/*
+
+chmod 600 /root/.ssh/config
+
+ifconfig eth1 10.0.0.254 up
+
+service ssh start

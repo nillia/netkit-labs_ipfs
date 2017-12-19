@@ -1,0 +1,5 @@
+node1: r1
+node2: r2
+node3: r3
+
+manager: r1 r2 r3
