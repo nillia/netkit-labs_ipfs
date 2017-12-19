@@ -2,4 +2,5 @@
 
 if [ -f /tmp/ipfs.pid ]; then
 	kill -9 $(cat /tmp/ipfs.pid)
+  rm /tmp/ipfs.pid
 fi

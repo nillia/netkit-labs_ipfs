@@ -1,9 +1,12 @@
 #!/bin/bash
 
-rm -rf /root/.ipfs
+if [ "$1" == "--init" ]; then
+   rm -rf /root/.ipfs
+   shift
+   ipfs init
+   sleep 1
+fi
 
-ipfs init
-sleep 1
 ipfs daemon "$@" &
 
 echo $! > /tmp/ipfs.pid
