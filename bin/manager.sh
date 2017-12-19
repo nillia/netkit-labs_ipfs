@@ -23,3 +23,9 @@ remove_bootstrap(){
 	  run_remote $NODE "ipfs bootstrap rm --all" &
   done
 }
+
+get_stats(){
+  run_remote $2 "ipfs stats bw" > stats_$1.txt
+  run_remote $2 "ipfs stats repo" >> stats_$1.txt
+  run_remote $2 "ipfs stats bitswap" >> stats_$1.txt
+}
